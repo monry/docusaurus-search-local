@@ -4,8 +4,8 @@ import jieba from "@node-rs/jieba";
 import { MatchMetadata } from "../../shared/interfaces";
 import { cutWordByUnderscore } from "./cutWordByUnderscore";
 
-// https://zhuanlan.zhihu.com/p/33335629
-const RegExpConsecutiveWord = /\w+|\p{Unified_Ideograph}+/u;
+// https://qiita.com/y_catch/items/46b7eb7d618d95fbc9c3
+const RegExpConsecutiveWord = /[\s\-\u{3000}-\u{301C}\u{3041}-\u{3093}\u{309B}-\u{309E}]+/gu;
 
 let userDictLoaded = false;
 
